@@ -1,11 +1,13 @@
 import random
 import urllib.request
 import urllib.parse
+import os
 from datetime import datetime
+import pytz
 
 # ===== TELEGRAM CONFIG =====
-TOKEN = "8688286094:AAGSeO-IaVwLc_MGA6ToeT3dwEz_yA56Wbg"
-CHAT_ID = "7723525044"
+TOKEN = os.getenv("TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
 
 # ===== TEAMS =====
 teams = {
@@ -50,8 +52,9 @@ def send_telegram(msg):
     except Exception as e:
         print("Telegram Error:", e)
 
-# ===== TODAY =====
-today = datetime.now().strftime("%Y-%m-%d")
+# ===== TODAY (IST TIMEZONE) =====
+ist = pytz.timezone('Asia/Kolkata')
+today = datetime.now(ist).strftime("%Y-%m-%d")
 
 # ===== MAIN =====
 found_match = False
