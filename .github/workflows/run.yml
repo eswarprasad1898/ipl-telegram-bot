@@ -2,7 +2,7 @@ name: Run IPL Bot
 
 on:
   schedule:
-    - cron: '30 7 * * *'   # ✅ 01:00 PM IST
+    - cron: '50 7 * * *'   # ✅ 01:20 PM IST
   workflow_dispatch:
 
 jobs:
