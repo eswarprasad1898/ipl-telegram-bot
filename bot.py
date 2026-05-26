@@ -28,7 +28,7 @@ schedule = [
     {"team1": "LSG", "team2": "RR", "date": "2026-05-19"},
     {"team1": "KKR", "team2": "MI", "date": "2026-05-20"},
     {"team1": "GT", "team2": "CSK", "date": "2026-05-21"},
-    {"team1": "SRH", "team2": "RCB", "date": "2026-05-22"},
+    {"team1": "RCB", "team2": "GT", "date": "2026-05-26"},
 ]
 
 # ===== FUNCTIONS =====
