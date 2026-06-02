@@ -28,12 +28,15 @@ teams = {
     "NOTTS": ("Nottinghamshire", "Joe Clarke"),
     "LEIC": ("Leicestershire", "Ben Green"),
     "ESS": ("Essex", "Harmer"),
-    "WARKS": ("Warwickshire", "Ed Barnard")
+    "WARKS": ("Warwickshire", "Ed Barnard"),
+    "INDW": ("India Women", "Harmanpreet Kaur"),
+    "ENGW": ("England Women", "Charlie Dean")
 }
 
 # ===== SCHEDULE =====
 schedule = [
     {"team1": "HAM", "team2": "SUS", "date": "2026-06-02"},
+    {"team1": "ENGW", "team2": "INDW", "date": "2026-06-02"},
     {"team1": "SUR", "team2": "MDX", "date": "2026-06-03"},
     {"team1": "SOM", "team2": "GLAM", "date": "2026-06-04"},
     {"team1": "WORCS", "team2": "GLAM", "date": "2026-06-05"},
