@@ -11,24 +11,32 @@ CHAT_ID = os.getenv("CHAT_ID")
 
 # ===== TEAMS =====
 teams = {
-    "MI": ("Mumbai Indians", "Hardik Pandya"),
-    "CSK": ("Chennai Super Kings", "Ruturaj Gaikwad"),
-    "RCB": ("Royal Challengers Bangalore", "Rajat Patidar"),
-    "KKR": ("Kolkata Knight Riders", "Ajinkya Rahane"),
-    "SRH": ("Sunrisers Hyderabad", "Pat Cummins"),
-    "DC": ("Delhi Capitals", "Axar Patel"),
-    "LSG": ("Lucknow Super Giants", "Rishabh Pant"),
-    "GT": ("Gujarat Titans", "Shubman Gill"),
-    "RR": ("Rajasthan Royals", "Riyan Parag"),
-    "PBKS": ("Punjab Kings", "Shreyas Iyer")
+    "HAM": ("Hampshire", "James Vince"),
+    "SUS": ("Sussex", "Tymal Mills"),
+    "NHNTS": ("Northamptonshire", "David Willey"),
+    "DUR": ("Durham", "Alex Lees"),
+    "WORCS": ("Worcestershire", "Brett DOliveira"),
+    "GLOUCS": ("Gloucestershire", "TBD"),
+    "SOM": ("Somerset", "Tom Banton"),
+    "SUR": ("Surrey", "Sam Curran"),
+    "GLAM": ("Glamorgan", "Kiran Carlson"),
+    "MDX": ("Middlesex", "Leus Du Plooy"),
+    "KENT": ("Kent", "Sam Billings"),
+    "LANCS": ("Lancashire", "Keaton Jennings"),
+    "YORKS": ("Yorkshire", "Jonny Bairstow"),
+    "DERBY": ("Derbyshire", "Aneurin Donald"),
+    "NOTTS": ("Nottinghamshire", "Joe Clarke"),
+    "LEIC": ("Leicestershire", "Ben Green"),
+    "ESS": ("Essex", "Harmer"),
+    "WARKS": ("Warwickshire", "Ed Barnard")
 }
 
 # ===== SCHEDULE =====
 schedule = [
-    {"team1": "LSG", "team2": "RR", "date": "2026-05-19"},
-    {"team1": "SRH", "team2": "RR", "date": "2026-05-27"},
-    {"team1": "GT", "team2": "SRH", "date": "2026-05-29"},
-    {"team1": "RCB", "team2": "GT", "date": "2026-05-31"},
+    {"team1": "HAM", "team2": "SUS", "date": "2026-06-02"},
+    {"team1": "SUR", "team2": "MDX", "date": "2026-06-03"},
+    {"team1": "SOM", "team2": "GLAM", "date": "2026-06-04"},
+    {"team1": "WORCS", "team2": "GLAM", "date": "2026-06-05"},
 ]
 
 # ===== FUNCTIONS =====
@@ -87,7 +95,7 @@ for match in schedule:
     match_date = datetime.strptime(match["date"], "%Y-%m-%d").strftime("%A, %d %b %Y")
 
     # ===== MESSAGE =====
-    message = f"""🏆 *IPL 2026 – Toss Prediction*
+    message = f"""🏆 *Toss Prediction*
 
 🗓 Date: {match_date}
 
@@ -108,4 +116,4 @@ for match in schedule:
 
 # ===== NO MATCH MESSAGE =====
 if not found_match:
-    send_telegram("❌ No IPL matches scheduled for today")
+    send_telegram("❌ No matches scheduled for today")
